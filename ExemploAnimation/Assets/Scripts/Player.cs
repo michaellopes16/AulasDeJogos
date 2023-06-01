@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
 
         anim.SetFloat("Horizontal", direction.x);
         anim.SetFloat("Vertical", direction.y);
-        anim.SetFloat("Velocity", direction.magnitude);
+        anim.SetFloat("Velocity", direction.sqrMagnitude);
 
         if (direction != Vector2.zero) {
             anim.SetFloat("HorizontalIdle", direction.x);
