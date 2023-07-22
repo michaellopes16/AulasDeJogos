@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -10,8 +11,12 @@ public class Player : MonoBehaviour
     [Range(3.0f, 10.0f)]
     private float velocidade = 5f;
 
+
+    [SerializeField] private Text textCountCoin;
+
     private Vector2 direction;
 
+    public int countCoins = 0;
 
     public Animator anim;
 
@@ -28,6 +33,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        textCountCoin.text = countCoins.ToString();
+
         direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
         anim.SetFloat("Horizontal", direction.x);
@@ -38,26 +45,8 @@ public class Player : MonoBehaviour
             anim.SetFloat("HorizontalIdle", direction.x);
             anim.SetFloat("VerticalIdle", direction.y);
         }
-        //if (direction.y > 0)
-        //{
-        //    playerController.PlayAnimation("WalkingBack");
-        //}
-        //else if (direction.y < 0)
-        //{
-        //    playerController.PlayAnimation("WalkingFront");
-        //}
-        //else if (direction.x>0)
-        //{
-        //    playerController.PlayAnimation("WalkingRight");
-        //}
-        //else if (direction.x < 0)
-        //{
-        //    playerController.PlayAnimation("WalkingLeft");
-        //}
-        //else
-        //{
-        //    playerController.PlayAnimation("Idle");
-        //}
+
+
     }
 
     public void FixedUpdate()
