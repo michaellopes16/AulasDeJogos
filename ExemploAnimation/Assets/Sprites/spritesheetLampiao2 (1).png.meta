@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 14f046fe47cf1e446967bacba54daf94
+guid: d79c0c650e9f8b14db9ede72c1324172
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,12 +129,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spritesheetLampiao2_0
+      name: spritesheetLampiao2 (1)_0
       rect:
         serializedVersion: 2
         x: 158
-        y: 4597
-        width: 1156
+        y: 6070
+        width: 1158
         height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0aa01a8ded0278c42bdb478c19d53607
-      internalID: 1634971093
+      spriteID: 625b8e1cf330f8e448eefb9d683f834d
+      internalID: 1431213251
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheetLampiao2_1
+      name: spritesheetLampiao2 (1)_1
       rect:
         serializedVersion: 2
-        x: 1630
-        y: 4574
-        width: 1156
-        height: 1179
+        x: 1628
+        y: 6045
+        width: 1158
+        height: 1178
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,19 +164,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ae6ba356c0547445beea5ef14c5b67c
-      internalID: -1984839266
+      spriteID: 9502067445400a542bff45f651140c09
+      internalID: -87702026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheetLampiao2_2
+      name: spritesheetLampiao2 (1)_2
       rect:
         serializedVersion: 2
         x: 3102
-        y: 4597
-        width: 1156
+        y: 6070
+        width: 1158
         height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -185,19 +185,61 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70ee7da093de3da4aa4559cec8c767bf
-      internalID: -1967143652
+      spriteID: 1408cfa4c2c068b48bd3843f75d2d41a
+      internalID: 1338336646
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheetLampiao2_3
+      name: spritesheetLampiao2 (1)_3
       rect:
         serializedVersion: 2
-        x: 4574
-        y: 4574
-        width: 1156
+        x: 4572
+        y: 6045
+        width: 1158
+        height: 1178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2b07e9e8e8cdcf479d2f130cec069ea
+      internalID: 805032977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetLampiao2 (1)_4
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 4596
+        width: 1158
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdf5a231200ff814b8d912ba6bf142e4
+      internalID: 1725885992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetLampiao2 (1)_5
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 4575
+        width: 1158
         height: 1179
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -206,19 +248,229 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67ae288b8a4c2d24582c18f58a11abe6
-      internalID: -1887225033
+      spriteID: 20326fbb92376c3469e0ad510d951366
+      internalID: -662150179
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheetLampiao2_4
+      name: spritesheetLampiao2 (1)_6
+      rect:
+        serializedVersion: 2
+        x: 3102
+        y: 4596
+        width: 1158
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46fec5aa8c678ab45bd6a21c75cc9da3
+      internalID: 568652050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetLampiao2 (1)_7
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 4575
+        width: 1158
+        height: 1179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe157be8d70dab4384bc21d81fa50bd
+      internalID: -1224444325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetLampiao2 (1)_8
       rect:
         serializedVersion: 2
         x: 158
-        y: 3125
-        width: 1156
+        y: 3101
+        width: 1158
+        height: 1158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a489f95ae41900f4d9558fd90a8a6edc
+      internalID: 562223533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetLampiao2 (1)_9
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 3101
+        width: 1158
+        height: 1179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 212460607e78f114fbb549a2f1dbf0d8
+      internalID: -358804351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetLampiao2 (1)_10
+      rect:
+        serializedVersion: 2
+        x: 3102
+        y: 3101
+        width: 1158
+        height: 1158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1453f72ba4b34bd43a4733d985c6914e
+      internalID: -822486080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetLampiao2 (1)_11
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 3101
+        width: 1158
+        height: 1179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 133d956e6c60424408e488bf84b2d745
+      internalID: 664957755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetLampiao2 (1)_12
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 1632
+        width: 1158
+        height: 1153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 582308cfa565ffb49a213420d27be9b9
+      internalID: 776284371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetLampiao2 (1)_13
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 1632
+        width: 1158
+        height: 1178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 934851bf1fc713a42b3189f1a68fe864
+      internalID: -913581612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetLampiao2 (1)_14
+      rect:
+        serializedVersion: 2
+        x: 3102
+        y: 1632
+        width: 1158
+        height: 1153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6def2cab2c15f4488fc2aed2a9bde51
+      internalID: 1927244731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetLampiao2 (1)_15
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 1632
+        width: 1158
+        height: 1178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 084b4a75f6fe23044b216be38314e4d6
+      internalID: 1791299987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheetLampiao2 (1)_16
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 180
+        width: 1158
         height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -227,40 +479,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ea813573332f3d449bfb326de735870
-      internalID: 1149273444
+      spriteID: 34a6dd6f7cd0b694dab2e80d00a3e098
+      internalID: 1845227561
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheetLampiao2_5
+      name: spritesheetLampiao2 (1)_17
       rect:
         serializedVersion: 2
-        x: 1630
-        y: 3102
-        width: 1156
-        height: 1179
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bdd237d09d05e2c44ac8e03ebe1e3e7a
-      internalID: -761539383
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spritesheetLampiao2_6
-      rect:
-        serializedVersion: 2
-        x: 3102
-        y: 3125
-        width: 1156
+        x: 1628
+        y: 180
+        width: 1158
         height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -269,83 +500,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e6152109f9b1dc4fb2fd3ec142fe5fd
-      internalID: 181532606
+      spriteID: 2bf248ca081f5944fb4031c3628d8771
+      internalID: -1501094593
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheetLampiao2_7
-      rect:
-        serializedVersion: 2
-        x: 4574
-        y: 3102
-        width: 1156
-        height: 1179
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b51af8155f642594da7d7ec895511a91
-      internalID: 287109850
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spritesheetLampiao2_8
-      rect:
-        serializedVersion: 2
-        x: 158
-        y: 1630
-        width: 1156
-        height: 1156
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b102249259004247abbdbfacf8eb4ce
-      internalID: -1459015406
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spritesheetLampiao2_9
-      rect:
-        serializedVersion: 2
-        x: 1630
-        y: 1630
-        width: 1156
-        height: 1179
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: abd22fea57bfebb4bb40328b0f2eb296
-      internalID: 548742672
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spritesheetLampiao2_10
+      name: spritesheetLampiao2 (1)_18
       rect:
         serializedVersion: 2
         x: 3102
-        y: 1630
-        width: 1156
-        height: 1156
+        y: 180
+        width: 1158
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -353,20 +521,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f45a27bbd845a1248af31de96643dec2
-      internalID: -1921983008
+      spriteID: f124a56f97532b4468b33a2e9d2b27c6
+      internalID: -187240627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheetLampiao2_11
+      name: spritesheetLampiao2 (1)_19
       rect:
         serializedVersion: 2
-        x: 4574
-        y: 1630
-        width: 1156
-        height: 1179
+        x: 4572
+        y: 180
+        width: 1158
+        height: 1110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -374,92 +542,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cafba89f73d3d0446b2fb32f75b906ad
-      internalID: -253091278
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spritesheetLampiao2_12
-      rect:
-        serializedVersion: 2
-        x: 158
-        y: 158
-        width: 1156
-        height: 1156
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a1e880a2cf4c530468062ed22d014814
-      internalID: 1729806274
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spritesheetLampiao2_13
-      rect:
-        serializedVersion: 2
-        x: 1630
-        y: 158
-        width: 1156
-        height: 1179
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d9a6d4b793c8e041b3d7a2cd11e49bf
-      internalID: 393263552
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spritesheetLampiao2_14
-      rect:
-        serializedVersion: 2
-        x: 3102
-        y: 158
-        width: 1156
-        height: 1156
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c468c5fdfbe0ff4f85fd71aedc21fca
-      internalID: 521272256
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spritesheetLampiao2_15
-      rect:
-        serializedVersion: 2
-        x: 4574
-        y: 158
-        width: 1156
-        height: 1179
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 77fbc8d96c366624da4bf8e06786283e
-      internalID: 319157890
+      spriteID: 3f37632135affa5479959cdf2f884455
+      internalID: 903807669
       vertices: []
       indices: 
       edges: []
@@ -475,22 +559,26 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      spritesheetLampiao2_9: 548742672
-      spritesheetLampiao2_10: -1921983008
-      spritesheetLampiao2_6: 181532606
-      spritesheetLampiao2_14: 521272256
-      spritesheetLampiao2_13: 393263552
-      spritesheetLampiao2_0: 1634971093
-      spritesheetLampiao2_7: 287109850
-      spritesheetLampiao2_15: 319157890
-      spritesheetLampiao2_5: -761539383
-      spritesheetLampiao2_2: -1967143652
-      spritesheetLampiao2_12: 1729806274
-      spritesheetLampiao2_1: -1984839266
-      spritesheetLampiao2_4: 1149273444
-      spritesheetLampiao2_11: -253091278
-      spritesheetLampiao2_8: -1459015406
-      spritesheetLampiao2_3: -1887225033
+      spritesheetLampiao2 (1)_11: 664957755
+      spritesheetLampiao2 (1)_5: -662150179
+      spritesheetLampiao2 (1)_16: 1845227561
+      spritesheetLampiao2 (1)_18: -187240627
+      spritesheetLampiao2 (1)_9: -358804351
+      spritesheetLampiao2 (1)_12: 776284371
+      spritesheetLampiao2 (1)_19: 903807669
+      spritesheetLampiao2 (1)_1: -87702026
+      spritesheetLampiao2 (1)_7: -1224444325
+      spritesheetLampiao2 (1)_13: -913581612
+      spritesheetLampiao2 (1)_14: 1927244731
+      spritesheetLampiao2 (1)_6: 568652050
+      spritesheetLampiao2 (1)_10: -822486080
+      spritesheetLampiao2 (1)_15: 1791299987
+      spritesheetLampiao2 (1)_0: 1431213251
+      spritesheetLampiao2 (1)_2: 1338336646
+      spritesheetLampiao2 (1)_3: 805032977
+      spritesheetLampiao2 (1)_8: 562223533
+      spritesheetLampiao2 (1)_4: 1725885992
+      spritesheetLampiao2 (1)_17: -1501094593
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     private Vector2 direction;
 
     public int countCoins = 0;
+    public float countHelth = 100f;
 
     public Animator anim;
 
@@ -45,8 +46,6 @@ public class Player : MonoBehaviour
             anim.SetFloat("HorizontalIdle", direction.x);
             anim.SetFloat("VerticalIdle", direction.y);
         }
-
-
     }
 
     public void FixedUpdate()
