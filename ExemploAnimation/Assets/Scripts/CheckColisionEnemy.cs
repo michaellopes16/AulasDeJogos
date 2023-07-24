@@ -6,7 +6,7 @@ public class CheckColisionEnemy : MonoBehaviour
 {
     public float temporaryAnimationDuration = 2f;
     private AnimationClip originalAnimation;
-    public float damagePlayer = 10f;
+    public int damagePlayer = 10;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,7 +15,7 @@ public class CheckColisionEnemy : MonoBehaviour
             Animator animator = collision.gameObject.GetComponent<Animator>();
             originalAnimation = animator.GetCurrentAnimatorClipInfo(0)[0].clip;
             StartCoroutine(PlayTemporaryAnimation(animator));
-            collision.gameObject.GetComponent<Player>().countHelth -= damagePlayer;
+            collision.gameObject.GetComponent<Player>().TakeDamage(damagePlayer);
         }
     }
     IEnumerator PlayTemporaryAnimation(Animator animator)

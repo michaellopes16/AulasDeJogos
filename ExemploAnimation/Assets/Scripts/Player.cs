@@ -13,11 +13,13 @@ public class Player : MonoBehaviour
 
 
     [SerializeField] private Text textCountCoin;
+    [SerializeField] private Text textCountLifes;
 
     private Vector2 direction;
 
     public int countCoins = 0;
-    public float countHelth = 100f;
+    public int countHelth = 100;
+    public int countLifes = 3;
 
     public Animator anim;
 
@@ -27,8 +29,10 @@ public class Player : MonoBehaviour
 
     //[SerializeField]
     //private PlayerController playerController;
+    public HealthBar healthBar;
     void Start()
     {
+        healthBar.SetMaxHealth(countHelth);
     }
 
     // Update is called once per frame
@@ -57,5 +61,28 @@ public class Player : MonoBehaviour
 
         rig.velocity = new Vector2(direction.x * velocidade, direction.y * velocidade);
 
+    }
+    public void LoseLife()
+    {
+        countLifes -= 1;
+        textCountLifes.text = countLifes.ToString();
+        if (countLifes > 0)
+        {
+            countHelth = 100;
+            healthBar.SetHealth(countHelth);
+        }
+        else
+        {
+            textCountLifes.text = "Lose";
+        }
+    }
+    public void TakeDamage(int damagePlayer)
+    {
+        countHelth -= damagePlayer;
+        healthBar.SetHealth(countHelth);
+        if (countHelth <= 0)
+        {
+            LoseLife();
+        }
     }
 }
