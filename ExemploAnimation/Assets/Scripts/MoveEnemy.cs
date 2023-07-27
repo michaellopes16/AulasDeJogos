@@ -14,13 +14,13 @@ public class MoveEnemy : MonoBehaviour
     public Animator anim;
 
     // Start is called before the first frame update
-    void Start()
+    public virtual void Start()
     {
         currentTarget = targetB;
     }
 
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
         CheckArrivedInTarget();
         MoveUntilTarget();

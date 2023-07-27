@@ -11,12 +11,10 @@ public class MoveTatuEnemy : MoveEnemy
         if (currentTarget == targetA && transform.position == targetA.position)
         {
             currentTarget = targetB;
-            anim.Play("TatuWalking");
         }
         if (currentTarget == targetB && transform.position == targetB.position)
         {
             currentTarget = targetA;
-            anim.Play("TatuRolling");
         }
     }
 }
