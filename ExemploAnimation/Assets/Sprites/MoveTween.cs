@@ -23,9 +23,7 @@ public class MoveTween : MonoBehaviour
         for (int i = 0; i < controlPoints.Length; i++)
         {
             path[i] = controlPoints[i].position;
-            print(path[i]);
         }
-        print(path.Length);
         // Use o LeanTween.move para mover o objeto ao longo da trajetória
         LeanTween.move(gameObject, path, duration).setSpeed(speed).setEase(LeanTweenType.easeInOutSine).setLoopPingPong().setOrientToPath(false);
     }

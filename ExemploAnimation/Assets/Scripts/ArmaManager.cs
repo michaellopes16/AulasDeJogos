@@ -38,7 +38,7 @@ public class ArmaManager : MonoBehaviour
         fireTime = Time.time + fireRate;
 
         //Instantiate
-        print("Atirando");
+        Instantiate(bullet, barrel.position, barrel.rotation);
     }
     private bool CanShoot()
     {

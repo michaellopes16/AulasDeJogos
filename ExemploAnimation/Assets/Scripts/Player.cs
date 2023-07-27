@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     public int countLifes = 3;
 
     public Animator anim;
+    public Renderer warepon;
 
     [Header("Corpo do player")]
     [SerializeField]
@@ -39,14 +40,58 @@ public class Player : MonoBehaviour
     void Update()
     {
         textCountCoin.text = countCoins.ToString();
+        GetKeyboardInput();
+        //GetMouseInput();
+    }
+    private void GetMouseInput()
+    {
+        direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-        direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        Vector2 dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+
+        if (dir.x> 0 ) {
+            anim.SetFloat("Horizontal", 1);
+            anim.SetFloat("HorizontalIdle", 1);
+        }else if (dir.x < 0)
+        {
+            anim.SetFloat("Horizontal", -1);
+            anim.SetFloat("HorizontalIdle", -1);
+        }
+        if (direction.y > 0) {
+            warepon.sortingOrder = -1;
+        }
+        else
+        {
+            warepon.sortingOrder = 5;
+        }
 
         anim.SetFloat("Horizontal", direction.x);
         anim.SetFloat("Vertical", direction.y);
         anim.SetFloat("Velocity", direction.sqrMagnitude);
 
-        if (direction != Vector2.zero) {
+        if (direction != Vector2.zero)
+        {
+            anim.SetFloat("HorizontalIdle", direction.x);
+            anim.SetFloat("VerticalIdle", direction.y);
+        }
+    }
+    private void GetKeyboardInput()
+    {
+        direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+
+        anim.SetFloat("Horizontal", direction.x);
+        anim.SetFloat("Vertical", direction.y);
+        anim.SetFloat("Velocity", direction.sqrMagnitude);
+        if (direction.y > 0)
+        {
+            warepon.sortingOrder = -1;
+        }
+        else if (direction.y < 0)
+        {
+            warepon.sortingOrder = 5;
+        }
+        if (direction != Vector2.zero)
+        {
             anim.SetFloat("HorizontalIdle", direction.x);
             anim.SetFloat("VerticalIdle", direction.y);
         }
@@ -57,7 +102,8 @@ public class Player : MonoBehaviour
         Move();
     }
 
-    public void Move() {
+    public void Move()
+    {
 
         rig.velocity = new Vector2(direction.x * velocidade, direction.y * velocidade);
 
