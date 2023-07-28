@@ -8,6 +8,8 @@ TagManager:
   - CoinTarget
   - Enemy
   - Bullet
+  - Weapon
+  - WeaponPlayer
   layers:
   - Default
   - TransparentFX

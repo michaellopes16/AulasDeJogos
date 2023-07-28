@@ -139,6 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   temporaryAnimationDuration: 2
   damagePlayer: 10
+  PikupEffect: {fileID: 8231268760316908068, guid: e7461c881131d864b800787a1e0e9ff4, type: 3}
 --- !u!114 &8728244408109133739
 MonoBehaviour:
   m_ObjectHideFlags: 0
