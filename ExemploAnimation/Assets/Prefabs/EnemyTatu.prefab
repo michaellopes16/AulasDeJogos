@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8728244408109133744}
   - component: {fileID: 8728244408109133740}
   - component: {fileID: 8728244408109133739}
+  - component: {fileID: 2998474012398513578}
   m_Layer: 0
   m_Name: Tatu
   m_TagString: Enemy
@@ -157,6 +158,27 @@ MonoBehaviour:
   sr: {fileID: 8728244408109133742}
   velocity: 2
   anim: {fileID: 8728244408109133743}
+--- !u!50 &2998474012398513578
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8728244408109133747}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &8728244408872278341
 GameObject:
   m_ObjectHideFlags: 0

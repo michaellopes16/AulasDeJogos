@@ -32,7 +32,7 @@ public class PowerUpCoin : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             //Adicionar um efeito ao tocar na moeda
-            Instantiate(PikupEffect, transform.position,transform.rotation);
+            GameObject particula =  Instantiate(PikupEffect, transform.position,transform.rotation);
 
             //Desabilitar o colider para não ter problemas com colisão
             gameObject.GetComponent<Collider2D>().enabled = false;
@@ -42,6 +42,8 @@ public class PowerUpCoin : MonoBehaviour
             player.countCoins += 1;
 
             //Destroir meu objeto
+            float tempoDeVidaParticula = particula.GetComponent<ParticleSystem>().main.duration;
+            Destroy(particula, tempoDeVidaParticula);
             Destroy(gameObject, 1.8f);
         }
     }

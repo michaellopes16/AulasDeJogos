@@ -84,7 +84,7 @@ public class Player : MonoBehaviour
         anim.SetFloat("Velocity", direction.sqrMagnitude);
         if (direction.y > 0)
         {
-            warepon.sortingOrder = -1;
+            warepon.sortingOrder = 3;
         }
         else if (direction.y < 0)
         {

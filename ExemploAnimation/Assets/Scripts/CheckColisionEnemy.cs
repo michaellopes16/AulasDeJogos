@@ -10,7 +10,7 @@ public class CheckColisionEnemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
             Animator animator = collision.gameObject.GetComponent<Animator>();
             originalAnimation = animator.GetCurrentAnimatorClipInfo(0)[0].clip;
@@ -18,6 +18,7 @@ public class CheckColisionEnemy : MonoBehaviour
             collision.gameObject.GetComponent<Player>().TakeDamage(damagePlayer);
         }
     }
+
     IEnumerator PlayTemporaryAnimation(Animator animator)
     {
         // Reproduza a animação temporária

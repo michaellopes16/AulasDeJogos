@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 904941858653724123}
   - component: {fileID: 904941858653724120}
   - component: {fileID: 9182714255130346277}
+  - component: {fileID: 8673508163094603406}
   m_Layer: 0
   m_Name: Fantasma
   m_TagString: Enemy
@@ -253,3 +254,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   temporaryAnimationDuration: 2
   damagePlayer: 15
+--- !u!50 &8673508163094603406
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904941858653724127}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
