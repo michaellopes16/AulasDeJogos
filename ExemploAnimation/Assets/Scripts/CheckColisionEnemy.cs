@@ -9,6 +9,7 @@ public class CheckColisionEnemy : MonoBehaviour
     public int damagePlayer = 10;
     public GameObject PikupEffect;
     public int healthCount = 50;
+    private Manager3DEffects manager3DEffects;
     private Manager2DEffects manager2DEffects;
     [SerializeField] AudioClip audioClipDiethEffect;
     [SerializeField] AudioClip audioClipDemageEffect;
@@ -17,7 +18,9 @@ public class CheckColisionEnemy : MonoBehaviour
     private void Start()
     {
         //healthBar.SetMaxHealth(50);
+        manager3DEffects = GameObject.Find("Manager3DEffects").GetComponent<Manager3DEffects>();
         manager2DEffects = GameObject.Find("Manager2DEffects").GetComponent<Manager2DEffects>();
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -52,7 +55,7 @@ public class CheckColisionEnemy : MonoBehaviour
             ////Add a death effect when the collision ocour
             //if (healthCount <= 0)
             //{
-            manager2DEffects.PlayAudioClip(audioClipDiethEffect);
+            manager3DEffects.PlayAudioClip(audioClipDiethEffect);
             GameObject particula = Instantiate(PikupEffect, transform.position, transform.rotation);
             //Distroy the enemy and the effect generated with death
             float tempoDeVidaParticula = particula.GetComponent<ParticleSystem>().main.duration;

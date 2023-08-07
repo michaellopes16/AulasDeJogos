@@ -31,8 +31,16 @@ public class Player : MonoBehaviour
     //[SerializeField]
     //private PlayerController playerController;
     public HealthBar healthBar;
+    public FixedJoystick fixedJoystick;
     void Start()
     {
+        GameObject joystick = GameObject.FindGameObjectsWithTag("Joystick")[0];
+
+        if (Application.isMobilePlatform)
+        {
+            joystick.SetActive(false);
+        }
+        else { joystick.SetActive(false); }
         healthBar.SetMaxHealth(countHelth);
     }
 
@@ -42,12 +50,36 @@ public class Player : MonoBehaviour
         textCountCoin.text = countCoins.ToString();
         if (Application.isMobilePlatform)
         {
-            
+            GetJoystickMoviments();
             // Faça algo específico para dispositivos móveis aqui.
         }
-        else{GetKeyboardInput();}
+        else{
+            GetKeyboardInput(); 
+        }
         
         //GetMouseInput();
+    }
+
+    public void GetJoystickMoviments()
+    {
+        direction = new Vector2(fixedJoystick.Horizontal, fixedJoystick.Vertical);
+        
+        anim.SetFloat("Horizontal", direction.x);
+        anim.SetFloat("Vertical", direction.y);
+        anim.SetFloat("Velocity", direction.sqrMagnitude);
+        if (direction.y > 0)
+        {
+            warepon.sortingOrder = 3;
+        }
+        else if (direction.y < 0)
+        {
+            warepon.sortingOrder = 5;
+        }
+        if (direction != Vector2.zero)
+        {
+            anim.SetFloat("HorizontalIdle", direction.x);
+            anim.SetFloat("VerticalIdle", direction.y);
+        }
     }
     private void GetMouseInput()
     {
