@@ -10,6 +10,9 @@ public class PowerUpCoin : MonoBehaviour
     //Velocidade da subida da moeda
     [SerializeField] private float speed = 5f;
 
+    private Manager2DEffects manager2DEffects;
+    [SerializeField] private AudioClip audioClipCoin;
+
     bool moveCoin;
 
     GameObject target;
@@ -17,13 +20,14 @@ public class PowerUpCoin : MonoBehaviour
     private void Start()
     {
         target = GameObject.FindGameObjectWithTag("CoinTarget");
+        manager2DEffects = GameObject.Find("Manager2DEffects").GetComponent<Manager2DEffects>();
     }
 
     private void Update()
     {
         if (moveCoin)
         {
-            transform.position = Vector3.Lerp(transform.position,target.transform.position,speed*Time.deltaTime);
+            transform.position = Vector3.Lerp(transform.position, target.transform.position, speed * Time.deltaTime);
         }
     }
 
@@ -32,13 +36,13 @@ public class PowerUpCoin : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             //Adicionar um efeito ao tocar na moeda
-            GameObject particula =  Instantiate(PikupEffect, transform.position,transform.rotation);
-
+            manager2DEffects.PlayAudioClip(audioClipCoin);
+            GameObject particula = Instantiate(PikupEffect, transform.position, transform.rotation);
             //Desabilitar o colider para não ter problemas com colisão
             gameObject.GetComponent<Collider2D>().enabled = false;
             moveCoin = true;
             //Incrementar um contador das moedas
-            Player player =  collision.GetComponent<Player>();
+            Player player = collision.GetComponent<Player>();
             player.countCoins += 1;
 
             //Destroir meu objeto

@@ -11,7 +11,7 @@ public class MoveTween : MonoBehaviour
     private void Start()
     {
         // Verifique se existem pelo menos 4 pontos (dois conjuntos) para criar uma trajetória válida
-        if (controlPoints.Length < 2)
+        if (controlPoints.Length < 4)
         {
             Debug.LogError("É necessário pelo menos quatro pontos (dois conjuntos) para criar uma trajetória válida.");
             return;

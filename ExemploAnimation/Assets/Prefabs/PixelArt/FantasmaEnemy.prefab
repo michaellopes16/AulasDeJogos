@@ -255,6 +255,9 @@ MonoBehaviour:
   temporaryAnimationDuration: 2
   damagePlayer: 15
   PikupEffect: {fileID: 8231268760316908068, guid: e7461c881131d864b800787a1e0e9ff4, type: 3}
+  healthCount: 50
+  audioClipDiethEffect: {fileID: 8300000, guid: 7c9e9af1c63b7724786ba8fe74ea9a8f, type: 3}
+  audioClipDemageEffect: {fileID: 8300000, guid: 167f19ae1ea3aaf49a4d63a5fb4eaee3, type: 3}
 --- !u!50 &8673508163094603406
 Rigidbody2D:
   serializedVersion: 4

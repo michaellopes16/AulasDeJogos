@@ -40,7 +40,13 @@ public class Player : MonoBehaviour
     void Update()
     {
         textCountCoin.text = countCoins.ToString();
-        GetKeyboardInput();
+        if (Application.isMobilePlatform)
+        {
+            
+            // Faça algo específico para dispositivos móveis aqui.
+        }
+        else{GetKeyboardInput();}
+        
         //GetMouseInput();
     }
     private void GetMouseInput()

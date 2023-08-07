@@ -44,6 +44,7 @@ public class MoveEnemy : MonoBehaviour
         float distancia = Vector2.Distance(transform.position, currentTarget.position);
         if (distancia <= distanciaMinima)
         {
+            //Dá pra fazer só isso se não quiser fazer a verificação da distância
             transform.position = Vector2.MoveTowards(transform.position, currentTarget.position, velocity * Time.deltaTime);
         }
     }

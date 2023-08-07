@@ -140,6 +140,9 @@ MonoBehaviour:
   temporaryAnimationDuration: 2
   damagePlayer: 10
   PikupEffect: {fileID: 8231268760316908068, guid: e7461c881131d864b800787a1e0e9ff4, type: 3}
+  healthCount: 50
+  audioClipDiethEffect: {fileID: 8300000, guid: 515545d1de6d35644976ebda8ec2e8c1, type: 3}
+  audioClipDemageEffect: {fileID: 8300000, guid: 167f19ae1ea3aaf49a4d63a5fb4eaee3, type: 3}
 --- !u!114 &8728244408109133739
 MonoBehaviour:
   m_ObjectHideFlags: 0

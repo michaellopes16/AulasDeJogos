@@ -137,3 +137,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PikupEffect: {fileID: 4526676524519650696, guid: 1d776d66e1955a24887d87dc55f08e5a, type: 3}
   speed: 5
+  manager2DEffects: {fileID: 6352337094484454659, guid: 5a0570b2c2c06e848b368bfb87adcfa0, type: 3}
+  audioClipCoin: {fileID: 8300000, guid: e9e3d472261e23843ac3073118459686, type: 3}
