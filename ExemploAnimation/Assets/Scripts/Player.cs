@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
 
         if (Application.isMobilePlatform)
         {
-            joystick.SetActive(false);
+            joystick.SetActive(true);
         }
         else { joystick.SetActive(false); }
         healthBar.SetMaxHealth(countHelth);

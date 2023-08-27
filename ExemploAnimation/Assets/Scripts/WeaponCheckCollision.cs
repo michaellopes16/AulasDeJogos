@@ -16,8 +16,16 @@ public class WeaponCheckCollision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+
+            if (weapon.activeSelf)
+            {
+                collision.gameObject.GetComponent<Player>().countCoins += 10;
+            }
+            else
+            {
+                weapon.SetActive(true);
+            }
             manager2DEffects.PlayAudioClip(audioClip3Deffect);
-            weapon.SetActive(true);
             Destroy(gameObject);
         }
     }

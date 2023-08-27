@@ -33,6 +33,9 @@ public class Player2D : MonoBehaviour
     public RawImage background;
     private float rectMove = 0f;
 
+    public int countCoins = 0;
+    public Text textCoin;
+
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
@@ -44,6 +47,7 @@ public class Player2D : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        UpdateCoin();
         direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
         if (direction.x < 0)
@@ -91,6 +95,10 @@ public class Player2D : MonoBehaviour
         Jump();
     }
 
+    public void UpdateCoin()
+    {
+        textCoin.text = countCoins.ToString();
+    }
     void Move()
     {
         //Debug.Log(direction);

@@ -11,6 +11,9 @@ TagManager:
   - Weapon
   - WeaponPlayer
   - Joystick
+  - SoundManager
+  - BulletSoldier
+  - Soldier
   layers:
   - Default
   - TransparentFX

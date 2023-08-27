@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MoveTween : MonoBehaviour
 {
-    public Transform[] controlPoints; // Array de pontos de controle e pontos finais da curva
-    public float duration = 5f; // Duração da animação em segundos
-    [SerializeField] float speed = 3f;
+    [SerializeField] private Transform[] controlPoints; // Array de pontos de controle e pontos finais da curva
+    [SerializeField] private float duration = 5f; // Duração da animação em segundos
+    [SerializeField] private float speed = 3f;
 
     private void Start()
     {

@@ -8,18 +8,24 @@ public class CheckColisionEnemy : MonoBehaviour
     private AnimationClip originalAnimation;
     public int damagePlayer = 10;
     public GameObject PikupEffect;
-    public int healthCount = 50;
+    public bool isBullet = false;
     private Manager3DEffects manager3DEffects;
     private Manager2DEffects manager2DEffects;
     [SerializeField] AudioClip audioClipDiethEffect;
     [SerializeField] AudioClip audioClipDemageEffect;
-    //public HealthBar healthBar;
+    [SerializeField] private int healthCount = 30;
+
+    public HealthBar healthBar;
 
     private void Start()
     {
         //healthBar.SetMaxHealth(50);
         manager3DEffects = GameObject.Find("Manager3DEffects").GetComponent<Manager3DEffects>();
         manager2DEffects = GameObject.Find("Manager2DEffects").GetComponent<Manager2DEffects>();
+        if (gameObject.CompareTag("Soldier"))
+        {
+            healthBar.SetMaxHealth(healthCount);
+        }
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -42,36 +48,54 @@ public class CheckColisionEnemy : MonoBehaviour
             {
                 Debug.LogError("Subobjeto com a tag WeaponAim não encontrado no objeto colidido!");
             }
-            Animator animator = collision.gameObject.GetComponent<Animator>();
-            originalAnimation = animator.GetCurrentAnimatorClipInfo(0)[0].clip;
-            StartCoroutine(PlayTemporaryAnimation(animator));
+            Animator animator = collision.gameObject.GetComponent<Animator>();           
+            StartCoroutine(PlayTemporaryAnimation(animator, "Death"));
             collision.gameObject.GetComponent<Player>().TakeDamage(damagePlayer);
+            if (isBullet)
+            {
+                Destroy(gameObject);
+            }
         }
 
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            //healthCount -= 10;
-            //healthBar.SetHealth(healthCount);
-            ////Add a death effect when the collision ocour
-            //if (healthCount <= 0)
-            //{
-            manager3DEffects.PlayAudioClip(audioClipDiethEffect);
-            GameObject particula = Instantiate(PikupEffect, transform.position, transform.rotation);
-            //Distroy the enemy and the effect generated with death
-            float tempoDeVidaParticula = particula.GetComponent<ParticleSystem>().main.duration;
-            Destroy(collision.gameObject);
-            gameObject.SetActive(false);
-            Destroy(particula, tempoDeVidaParticula);
-            Destroy(gameObject, 3f);
-            //}
+            if (gameObject.CompareTag("Soldier"))
+            {
+                healthCount -= 10;
+                healthBar.SetHealth(healthCount);
+                Animator animatorSoldier = gameObject.GetComponent<Animator>();
+                StartCoroutine(PlayTemporaryAnimation(animatorSoldier, "AnimSoldDeath"));
+                //healthBar.SetHealth(healthCount);
+                //Add a death effect when the collision ocour
+                if (healthCount <= 0)
+                {
+                    DestroyObject(collision);
+                }
+            }
+            else
+            {
+                DestroyObject(collision);
+            }
         }
     }
 
-    IEnumerator PlayTemporaryAnimation(Animator animator)
+    private void DestroyObject(Collider2D collision)
     {
-        // Reproduza a animação temporária
-        animator.Play("Death");
+        manager3DEffects.PlayAudioClip(audioClipDiethEffect);
+        GameObject particula = Instantiate(PikupEffect, transform.position, transform.rotation);
+        //Distroy the enemy and the effect generated with death
+        float tempoDeVidaParticula = particula.GetComponent<ParticleSystem>().main.duration;
+        Destroy(collision.gameObject);
+        gameObject.SetActive(false);
+        Destroy(particula, tempoDeVidaParticula);
+        Destroy(gameObject, 3f);
+    }
 
+    IEnumerator PlayTemporaryAnimation(Animator animator, string animName)
+    {
+        originalAnimation = animator.GetCurrentAnimatorClipInfo(0)[0].clip;
+        // Reproduza a animação temporária
+        animator.Play(animName);
         // Espere pela duração da animação temporária
         yield return new WaitForSeconds(temporaryAnimationDuration);
 
@@ -79,3 +103,4 @@ public class CheckColisionEnemy : MonoBehaviour
         animator.Play(originalAnimation.name);
     }
 }
+

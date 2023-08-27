@@ -19,4 +19,6 @@ public class BulletBehaviour : MonoBehaviour
     {
         transform.Translate(Vector2.right * bulletSpeed * Time.deltaTime);
     }
+
+
 }
