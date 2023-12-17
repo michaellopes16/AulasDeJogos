@@ -42,7 +42,6 @@ public class DogBehavior : MonoBehaviour
                 dialog.OpenDialog(sentecesToDialog, characterName, spriteCharacter);
                 dialogOpened = true;
             }
-            print("Folowing...");
             agent.SetDestination(player.transform.position);
             agent.stoppingDistance = 3;
             ChangeAnimation();

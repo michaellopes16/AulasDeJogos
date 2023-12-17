@@ -18,7 +18,6 @@ public class SoldBehavior : MonoBehaviour
     void Start()
     {
         timeToStartingFollow = Random.Range(minValue, maxValue);
-        print("TEmpo inicial: "+ timeToStartingFollow);
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
 

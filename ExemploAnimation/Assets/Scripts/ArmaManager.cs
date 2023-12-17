@@ -24,21 +24,31 @@ public class ArmaManager : MonoBehaviour
         //MoveWeapon();
         HandleShooting();
     }
+    public bool IsMobile()
+    {
+        if (Application.isMobilePlatform)
+        {
+            return true;
+        }
+        else { return false; }
+    }
 
     private void HandleShooting()
     {
         //Dessa forma, ele fica atirando direto. Se quiser que o jogador fique clicando, tem que ser o MouseButtonDown
-        if (Input.GetMouseButton(0) && CanShoot())
+        if (!IsMobile()  && (Input.GetMouseButton(0) || Input.GetButtonDown("Shoot")))
         {
             Shoot();
         }
     }
     public void Shoot() {
+        if (CanShoot() && transform.parent.gameObject.activeSelf)
+        {
+            fireTime = Time.time + fireRate;
 
-        fireTime = Time.time + fireRate;
-
-        //Instantiate
-        Instantiate(bullet, barrel.position, barrel.rotation);
+            //Instantiate
+            Instantiate(bullet, barrel.position, barrel.rotation);
+        }
     }
     private bool CanShoot()
     {

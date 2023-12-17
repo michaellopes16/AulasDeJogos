@@ -4266,7 +4266,7 @@ RectTransform:
   - {fileID: 8430010}
   - {fileID: 1596419881}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4339,7 +4339,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &614211613
 GameObject:
@@ -7110,7 +7110,7 @@ Transform:
   - {fileID: 1404705710}
   - {fileID: 83666088}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &713591785
 MonoBehaviour:
@@ -7230,9 +7230,8 @@ Transform:
   - {fileID: 1202956671}
   - {fileID: 237005597}
   - {fileID: 1802126057}
-  - {fileID: 1039274453}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1039274453 stripped
 Transform:
@@ -7277,7 +7276,7 @@ Transform:
   - {fileID: 2138262411}
   - {fileID: 1454647067}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1300522389
 MonoBehaviour:
@@ -7431,7 +7430,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.6824183
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7506,7 +7505,7 @@ Transform:
   - {fileID: 614211614}
   - {fileID: 284852811}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1454647066
 GameObject:
@@ -12588,7 +12587,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &2138262410
 GameObject:
@@ -12829,7 +12828,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 977069767}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4336457018743334869, guid: d668671328ef2c34b9be3067ef13a05b, type: 3}
       propertyPath: m_Size.x
@@ -12857,7 +12856,7 @@ PrefabInstance:
       objectReference: {fileID: 748017074}
     - target: {fileID: 4336457018743334874, guid: d668671328ef2c34b9be3067ef13a05b, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4336457018743334874, guid: d668671328ef2c34b9be3067ef13a05b, type: 3}
       propertyPath: m_LocalPosition.x

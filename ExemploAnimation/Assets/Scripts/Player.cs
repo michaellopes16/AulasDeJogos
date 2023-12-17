@@ -6,41 +6,57 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
-    [Header("Movimentação do jogador")]
+    [Header("Player Movement")]
     [SerializeField]
     [Range(3.0f, 10.0f)]
     private float velocidade = 5f;
-
-
-    [SerializeField] private Text textCountCoin;
-    [SerializeField] private Text textCountLifes;
-
     private Vector2 direction;
 
+    [Header("GUI components")]
+    [SerializeField] private Text textCountCoin;
+    [SerializeField] private Text textCountLifes;
+    [SerializeField] private Text textCountFlor;
+    public HealthBar healthBar;
+    public GameObject keyImage;
+
+
+    [Header("Count Variables")]
     public int countCoins = 0;
     public int countHelth = 100;
     public int countLifes = 3;
+    public int countFlorMandacaru =0;
+    [SerializeField] private int maxFruit = 2;
 
-    public Animator anim;
-    public Renderer warepon;
-
-    [Header("Corpo do player")]
+    [Header("Player body")]
     [SerializeField]
     Rigidbody2D rig;
+    public Animator anim;
+    public Renderer wareponSR;
 
     //[SerializeField]
     //private PlayerController playerController;
-    public HealthBar healthBar;
-    public FixedJoystick fixedJoystick;
+    [Header("Mobile elements")]
+    public GameObject fixedJoystick, fixedJoustick2;
+    public GameObject shotButton;
+
+    [Header("Audio")]
+    [SerializeField] private AudioClip opemDorEffect;
+    [SerializeField] private AudioSource AudioSource;
+
+    [Header("PowerUps")]
+    public GameObject weapon;
+    [SerializeField] private GameObject keyPowerUp;
+    public bool hasKey=false;
+    public bool showKey = false;
+    public BehaviourMenuGame menuGame;
     void Start()
     {
-        GameObject joystick = GameObject.FindGameObjectsWithTag("Joystick")[0];
-
         if (Application.isMobilePlatform)
         {
-            joystick.SetActive(true);
+            fixedJoystick.SetActive(true);
         }
-        else { joystick.SetActive(false); }
+        else { shotButton.SetActive(false); fixedJoystick.SetActive(false); }
+        //menuGame = GameObject.FindGameObjectWithTag("Manager").GetComponent<BehaviourMenuGame>();
         healthBar.SetMaxHealth(countHelth);
     }
 
@@ -48,32 +64,47 @@ public class Player : MonoBehaviour
     void Update()
     {
         textCountCoin.text = countCoins.ToString();
+        ManageNextLevel();
         if (Application.isMobilePlatform)
         {
+            if (weapon.activeSelf)
+            {
+                fixedJoustick2.SetActive(true);
+                shotButton.SetActive(true);
+            }
+            else
+            {
+                fixedJoustick2.SetActive(false);
+                shotButton.SetActive(false);
+            }
             GetJoystickMoviments();
             // Faça algo específico para dispositivos móveis aqui.
         }
-        else{
-            GetKeyboardInput(); 
+        else
+        {
+            shotButton.SetActive(false);
+            fixedJoustick2.SetActive(false);
+            GetKeyboardInput();
         }
-        
+
         //GetMouseInput();
     }
 
     public void GetJoystickMoviments()
     {
-        direction = new Vector2(fixedJoystick.Horizontal, fixedJoystick.Vertical);
-        
+        FixedJoystick _fixedJoystick = fixedJoystick.GetComponent<FixedJoystick>();
+        direction = new Vector2(_fixedJoystick.Horizontal, _fixedJoystick.Vertical);
+
         anim.SetFloat("Horizontal", direction.x);
         anim.SetFloat("Vertical", direction.y);
         anim.SetFloat("Velocity", direction.sqrMagnitude);
         if (direction.y > 0)
         {
-            warepon.sortingOrder = 3;
+            wareponSR.sortingOrder = 3;
         }
         else if (direction.y < 0)
         {
-            warepon.sortingOrder = 5;
+            wareponSR.sortingOrder = 5;
         }
         if (direction != Vector2.zero)
         {
@@ -87,20 +118,23 @@ public class Player : MonoBehaviour
 
         Vector2 dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
 
-        if (dir.x> 0 ) {
+        if (dir.x > 0)
+        {
             anim.SetFloat("Horizontal", 1);
             anim.SetFloat("HorizontalIdle", 1);
-        }else if (dir.x < 0)
+        }
+        else if (dir.x < 0)
         {
             anim.SetFloat("Horizontal", -1);
             anim.SetFloat("HorizontalIdle", -1);
         }
-        if (direction.y > 0) {
-            warepon.sortingOrder = -1;
+        if (direction.y > 0)
+        {
+            wareponSR.sortingOrder = -1;
         }
         else
         {
-            warepon.sortingOrder = 5;
+            wareponSR.sortingOrder = 5;
         }
 
         anim.SetFloat("Horizontal", direction.x);
@@ -122,11 +156,11 @@ public class Player : MonoBehaviour
         anim.SetFloat("Velocity", direction.sqrMagnitude);
         if (direction.y > 0)
         {
-            warepon.sortingOrder = 3;
+            wareponSR.sortingOrder = 3;
         }
         else if (direction.y < 0)
         {
-            warepon.sortingOrder = 5;
+            wareponSR.sortingOrder = 5;
         }
         if (direction != Vector2.zero)
         {
@@ -149,7 +183,6 @@ public class Player : MonoBehaviour
     public void LoseLife()
     {
         countLifes -= 1;
-        textCountLifes.text = countLifes.ToString();
         if (countLifes > 0)
         {
             countHelth = 100;
@@ -157,8 +190,29 @@ public class Player : MonoBehaviour
         }
         else
         {
-            textCountLifes.text = "Lose";
+            menuGame.OpenMenuLoss();
         }
+        textCountLifes.text = countLifes.ToString();
+
+    }
+
+    public void GetKey()
+    {
+        hasKey = true;
+        LeanTween.scale(keyImage.GetComponent<RectTransform>(), new Vector3(1, 1, 1), 1f).setEaseInBounce();
+    }
+    public void ManageNextLevel()
+    {
+        if (countFlorMandacaru>=maxFruit && !showKey) {
+            showKey = true;
+            AudioSource.PlayOneShot(opemDorEffect);
+            keyPowerUp.SetActive(true);
+        }
+    }
+    public void UpFlorMandacaru()
+    {
+        countFlorMandacaru++;
+        textCountFlor.text = countFlorMandacaru.ToString();
     }
     public void TakeDamage(int damagePlayer)
     {

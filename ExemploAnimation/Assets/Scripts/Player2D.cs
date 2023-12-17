@@ -81,7 +81,7 @@ public class Player2D : MonoBehaviour
             playAnim.PlayAnimation("Jump2D");
         }
         if (direction.x != 0) {
-            MoveBackground(direction.x);
+            //MoveBackground(direction.x);
         }
 
     }
@@ -93,6 +93,7 @@ public class Player2D : MonoBehaviour
     {
         Move();
         Jump();
+        Debug.Log("");
     }
 
     public void UpdateCoin()
